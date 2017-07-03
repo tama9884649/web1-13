@@ -46,6 +46,12 @@ document.getElementById('cookie').textContent = 'はじめまして';
 
 var current_time = new Date();
 setCookie('lastDate', current_time.toString(),7);
+
+
+document.getElementById('remove_cookie').onsubmit = function(){
+setCookie('lastDate', "", 0);
+};
+
 function getFileName() {
 
 return window.location.href.split('/').pop();
